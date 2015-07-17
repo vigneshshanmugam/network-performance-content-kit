@@ -1,0 +1,1 @@
+console.log('Async Loading after Window Onload using in JavaScript');

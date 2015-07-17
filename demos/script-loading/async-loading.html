@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>Script Loading Techniques</title>
+	<script type="text/javascript">
+		(function(w,d) {
+			window.onload = function(){
+				var s = d.createElement("script"), el = d.getElementsByTagName("script")[0]; s.async = true;
+		    	s.src = "async-attr.js"; el.parentNode.insertBefore(s, el);
+			}
+	  	})(window,window.document);
+	</script>
+	<script async type="text/javascript" src="async-js.js"></script>
+</head>
+<body>
+	<h2> Script Loading Techniques </h2>
+	<ul>
+		<li>Asynchronous Loading with async attribute without blocking the dom construction</li>
+		<li>Defer loading the script using defer attribute. </li>
+		<li>Async loading the script with JavaScript. </li>
+	</ul>
+
+	<p>For Detailed information on the performance issues due to these techniques, Checkout out Ilya's 
+		<a href="https://www.igvita.com/2014/05/20/script-injected-async-scripts-considered-harmful/">Explanation</a>
+	</p>
+	<script defer type="text/javascript" src="defer-attr.js"></script>
+</body>
+</html>

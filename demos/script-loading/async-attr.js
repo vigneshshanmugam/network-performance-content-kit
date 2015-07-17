@@ -1,0 +1,1 @@
+console.log('Async Loading using async Attribute');

@@ -1,0 +1,1 @@
+console.log('Defer Loading JavaScript using defer attribute');
