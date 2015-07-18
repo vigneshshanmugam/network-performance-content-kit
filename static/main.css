@@ -1,0 +1,14 @@
+body{
+	padding: 0;
+	margin: 0 auto;
+	width: 1000px;
+	box-sizing: border-box;
+	font-family : 'Droid Sans', sans-seriff;
+}
+
+@font-face{
+	font-family:'Droid Sans';
+    src: url('droadsans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
