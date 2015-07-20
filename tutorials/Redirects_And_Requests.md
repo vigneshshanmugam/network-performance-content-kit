@@ -8,8 +8,9 @@
 ## Minimizing No Of Redirects
 
 Redirects on the other hand trigger an addtional HTTP Request-Response cycle and delay the page from rendering. Each direct will trigger an addtional roundtrip time
-      + HTTP Request & Response - If the connection is Kept Alive.
-      + DNS + TCP Handshake + TLS + HTTP - If the connection is new/closed.
+
++ HTTP Request & Response - If the connection is Kept Alive.
++ DNS + TCP Handshake + TLS + HTTP - If the connection is new/closed.
 
 As a result, You should minimize the number of redirects to improve the performance.
 
