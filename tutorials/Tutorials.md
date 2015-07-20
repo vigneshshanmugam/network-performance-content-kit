@@ -6,11 +6,11 @@
 
 Delay (milliseconds)      |          Users Reaction
 --------------------------|--------------------------------------------
-0 - 100                               Instant
-100-300                            Slight perceptile delay
-300-1000                           Task focus, perceptible delay
-1 second+                         Mental context switch
-10 seconds+                       I'll come back later...
+0 - 100                   |           Instant
+100-300                   |         Slight perceptile delay
+300-1000                  |         Task focus, perceptible delay
+1 second+                 |        Mental context switch
+10 seconds+               |        I'll come back later...
 
 ### Objectives
 
