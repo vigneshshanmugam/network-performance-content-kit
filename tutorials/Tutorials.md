@@ -15,8 +15,7 @@ Delay (milliseconds)      |          Users Reaction
 
 ### Browser's Pipeline
 
-
-
+https://raw.githubusercontent.com/vigneshshanmugam/network-performance-content-kit/gh-pages/static/browser_pipeline.png
 
 ### Objectives
 

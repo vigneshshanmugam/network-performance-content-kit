@@ -28,5 +28,5 @@ Since the browser needs CSS to construct the render tree, CSS resources are sync
 #### Defer Loading
 
 
-Refer the demo here - 
+Refer the demo [here](https://github.com/vigneshshanmugam/network-performance-content-kit/tree/gh-pages/demos/script-loading)
 
