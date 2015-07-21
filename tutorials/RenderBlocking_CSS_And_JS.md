@@ -35,7 +35,10 @@ Put all the external Style Sheets as early as possible in the head tags so that 
 
 ##### Inline Critical CSS
 
+Split your CSS in to two parts: inline part which is used to style Above The Fold(ATF) content and remaining part that can be downloaded later.
 
+Inlining the ATF CSS in the HTML will reduce one round trip time required to fetch the resource and improves the time to first render of our pages. Make sure you are not inlining large CSS which will increase the size of the HTML.
+The CSS for below the fold content can be downloaded when the page is ready.
 
 ```html
 <!DOCTYPE html>
@@ -49,13 +52,13 @@ Put all the external Style Sheets as early as possible in the head tags so that 
         }
     </style>
     <script type="text/javascript">
-    (function(d){
-        var l = d.createElement("link"), 
-            el = d.getElementsByTagName("script")[0];
-        l.rel = "stylesheet";
-        l.href = "async.css";
-        el.parentNode.insertBefore(l, el);
-    })(window.document)
+        (function(d){
+            var l = d.createElement("link"), 
+                el = d.getElementsByTagName("script")[0];
+            l.rel = "stylesheet";
+            l.href = "async.css";
+            el.parentNode.insertBefore(l, el);
+        })(window.document)
     </script>
 </head>
 <body>
@@ -63,11 +66,9 @@ Put all the external Style Sheets as early as possible in the head tags so that 
 </html>
 ```
 
-For More information on loading CSS asynchronously check [loadCSS](https://github.com/filamentgroup/loadCSS) by Filament Group.
+ + Check out Addy Osmani's [critical](https://github.com/addyosmani/critical) package on extracting and inlining the Critical CSS. 
 
-
-##### Avoiding CSS Imports
-
+ + For More information on loading CSS asynchronously check [loadCSS](https://github.com/filamentgroup/loadCSS) by Filament Group.
 
 ### Blocking JS
 
