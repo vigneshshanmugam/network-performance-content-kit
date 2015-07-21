@@ -12,6 +12,12 @@ Delay (milliseconds)      |          Users Reaction
 1 second+                 |        Mental context switch
 10 seconds+               |        I'll come back later...
 
+
+### Browser's Pipeline
+
+
+
+
 ### Objectives
 
 In this section, We are going to learn the basic performance problems while creating a web application.
