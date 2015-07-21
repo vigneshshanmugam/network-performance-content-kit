@@ -72,16 +72,48 @@ The CSS for below the fold content can be downloaded when the page is ready.
 
 ### Blocking JS
 
-
+JavaScript resources blocks the browser from parsing the page unless marked as async, defer or added via a special JavaScript snippet. They force the browser to block DOM construction, fetch the script, and execute it before the browser can continue processing the rest of the page which reduces the first render time.
 
 ##### Scripts at the Bottom
 
+Moving the scripts at the bottom of the page will make sure the users don't have to wait for a script to finish downloading before they see something in your application.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <!-- Your Content Goes Here -->
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
+```
+
+This will still be requested synchronously which means the script will be downloaded before *domContentLoaded* and *onLoad* Event.
 
 ##### Async Loading
 
+There are two ways to download scripts without blocking the browser from DOM construction. 
 
-##### Defer Loading
+    1. Using async attribute.
+    2. Through JavaScript snippet.
 
+
+
+
+##### Using defer attribute
+
+On the other hand, you can inform the browser to continue downloading and parsing the document instead of blocking on the script using [defer](https://msdn.microsoft.com/library/ms533719(v=vs.85).aspx) attribute. Defer is useful in the older IE browsers(5.5-9) that does not support async attribute.
+
+Deffered scripts are guarenteed to be executed before DOMContentLoaded event in the order they were inserted. Unfortunately, the execution [order implementation is buggy](https://github.com/h5bp/lazyweb-requests/issues/42) and cannot be relied on.
+
+You can combine defer with async to improve the performance.
+
+```html
+<!-- Modern browsers will use 'async', older browsers will use 'defer' -->
+<script async defer src="main.js" type="text/javascript"></script>
+```
 
 Refer the demo [here](https://github.com/vigneshshanmugam/network-performance-content-kit/tree/gh-pages/demos/script-loading)
 
