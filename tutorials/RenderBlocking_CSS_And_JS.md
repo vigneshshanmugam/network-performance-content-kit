@@ -40,7 +40,7 @@ It is advisable to use media attribute which can have media queries as parameter
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="example.css" rel="stylesheet" media="screen" type="text/css">
     <link href="table.css" rel="stylesheet" media="(max-height:700px)" type="text/css">
-    <link href="print.css" rel="stylesheet" media="print"type="text/css">
+    <link href="print.css" rel="stylesheet" media="print" type="text/css">
 </head>
 <body></body>
 </html>
