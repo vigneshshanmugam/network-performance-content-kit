@@ -22,12 +22,25 @@ The above example showing the MDN website with and without CSS, demonstrates why
 
 Put all the external Style Sheets as early as possible in the head tags so that the browse can discover the <link> tags and dispatch the request for CSS as soon as possible.
 
+It is advisable to use media attribute which can have media queries as parameters in the link tag because it informs the browser about its usage eg:
+	
+   
+    1.The first example.css file is always render blocking.
+    2.The last two files ,table.css and print.css is used only when its conditions are satisfied.
+
+
+
+
+
+
 ```html
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="example.css" rel="stylesheet" type="text/css">
+    <link href="example.css" rel="stylesheet" media="screen" type="text/css">
+    <link href="table.css" rel="stylesheet" media="(max-height:700px)" type="text/css">
+    <link href="print.css" rel="stylesheet" media="print"type="text/css">
 </head>
 <body></body>
 </html>
