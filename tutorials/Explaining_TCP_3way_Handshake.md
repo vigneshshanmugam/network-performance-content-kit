@@ -9,3 +9,4 @@ All the connections to a domain begins with TCP handshake. To establish a connec
 3. Client increments both SYN & ACK by 1 and completes the handshake.
 
 
+![TCP 3 Way Handshake](https://github.com/vigneshshanmugam/network-performance-content-kit/blob/gh-pages/static/3_way_handshake.png)

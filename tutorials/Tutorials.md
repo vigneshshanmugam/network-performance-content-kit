@@ -34,6 +34,9 @@ In this section, We are going to learn the basic performance problems while crea
 + [PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
 
 
+To understand advanced concepts, please [click here](Advanced.md)
+
+
 PS: Most of the above mentioned techniques are applicable only to HTTP/1.1 
 
 
